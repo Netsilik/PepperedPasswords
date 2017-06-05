@@ -10,7 +10,7 @@ namespace Netsilik\Lib;
 /**
  * Handle peppered password hashes
  */
-final class Passwords
+final class PepperedPasswords
 {
 
 	/**
