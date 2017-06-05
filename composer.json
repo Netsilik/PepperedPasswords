@@ -1,5 +1,5 @@
 {
-    "name": "Netsilik/PepperedPasswords",
+    "name": "netsilik/peppered-passwords",
     "description": "Secure password hashing using HMAC before (BCrypt) Hash",
     "keywords": ["password hashing"],
     "type": "library",
