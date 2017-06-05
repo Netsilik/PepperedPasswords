@@ -28,7 +28,7 @@ final class PepperedPasswords
 	 * @param string $pepper The pepper to use as the HMac key
 	 * @return self
 	 */
-	public function __construct(string $pepper)
+	public function __construct($pepper)
 	{
 		$this->_pepper = $pepper;
 	}
