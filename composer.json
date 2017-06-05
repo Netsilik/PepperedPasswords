@@ -1,7 +1,7 @@
 {
     "name": "netsilik/peppered-passwords",
-    "description": "Secure password hashing using HMAC before (BCrypt) Hash",
-    "keywords": ["password hashing"],
+    "description": "Secure password hashing using HMAC before (BCrypt) Hash.",
+    "keywords": ["password", "password hashing", "security"],
     "type": "library",
     "license": "MIT",
 	"homepage": "https://gitlab.com/Netsilik/PepperedPasswords",
@@ -9,7 +9,7 @@
         {
             "name": "Jacco-V",
             "role": "Developer",
-			"homepage": "http://netsilik.nl"
+            "homepage": "http://netsilik.nl"
         }
     ],
     "minimum-stability": "stable",
