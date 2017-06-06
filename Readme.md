@@ -12,7 +12,7 @@ distributed under the Licence is distributed on an "AS IS" basis,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 Contact: info@netsilik.nl  
-Latest version available at: https://gitlabs.com/Netsilik/PepperedPasswords
+Latest version available at: https://gitlab.com/Netsilik/PepperedPasswords
 
 
 Installation
