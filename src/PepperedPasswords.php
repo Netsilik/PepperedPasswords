@@ -10,9 +10,9 @@ namespace Netsilik\Lib;
 /**
  * Handle peppered password hashes
  */
-class PepperedPasswords
+final class PepperedPasswords
 {
-
+	
 	/**
 	 * The algorithm to use for calculating the HMac of the password
 	 */
@@ -25,47 +25,46 @@ class PepperedPasswords
 	
 	/**
 	 * Constructor
-	 * 
-	 * @param string $pepper The pepper to use as the HMac key
-	 * @param int $cost The optional cost factor for the hashing algorithm, default value 12
+	 *
+	 * @param string $pepper  The pepper to use as the HMac key
 	 */
-	public function __construct(string $pepper, int $cost = 12)
+	public function __construct(string $pepper)
 	{
 		$this->_pepper = $pepper;
-		
-		$this->_cost = $cost;
 	}
 	
 	/**
 	 * Calculate the peppered hash of a password
-	 * 
+	 *
 	 * @param string $password The password to calculate the hash for
-	 * 
+	 *
 	 * @return string The peppered hash of the password supplied
 	 */
-	public function hash(string $password) : string
+	public function hash($password)
 	{
-		return password_hash($this->_hmac($password), PASSWORD_DEFAULT, ['cost' => $this->_cost]);
+		return password_hash($this->_hmac($password), PASSWORD_DEFAULT);
 	}
 	
 	/**
 	 * Verify a password against its peppered hash
-	 * 
-	 * @param string $password The password to verify
+	 *
+	 * @param string $password     The password to verify
 	 * @param string $passwordHash The password hash to verify the password against
-	 * 
+	 *
 	 * @return bool True if the password is correct, false otherwise
 	 */
-	public function verify(string $password, string $passwordHash) : bool
+	public function verify($password, $passwordHash)
 	{
 		return password_verify($this->_hmac($password), $passwordHash);
 	}
 	
 	/**
 	 * Compute the HMac for the password
+	 *
 	 * @return string the HMac for the supplied password
 	 */
-	private function _hmac(string $password) : string {
+	private function _hmac($password)
+	{
 		return hash_hmac(self::HMAC_ALGORITHM, $password, $this->_pepper, true);
 	}
 }
