@@ -28,6 +28,7 @@ Usage
 **Hashing new passwords**
 
 ```
+<?php
 namespace My\Name\Space;
 
 use Netsilik\Lib\PepperedPasswords;
@@ -41,6 +42,7 @@ $hash = $hasher->hash($new_plaintext_password); // Story $hash in the user's rec
 **Verifying passwords**
 
 ```
+<?php
 namespace My\Name\Space;
 
 use Netsilik\Lib\PepperedPasswords;
