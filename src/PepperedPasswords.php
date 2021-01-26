@@ -24,13 +24,22 @@ final class PepperedPasswords
 	private $_pepper;
 	
 	/**
+	 * @var array The options for the PASSWORD_DEFAULT hashing algorithm
+	 *            See {@link https://www.php.net/password_hash} for more details
+	 */
+	private $_options;
+	
+	/**
 	 * Constructor
 	 *
 	 * @param string $pepper  The pepper to use as the HMac key
+	 * @param array  $options The options for the PASSWORD_DEFAULT hashing algorithm
 	 */
-	public function __construct(string $pepper)
+	public function __construct(string $pepper, array $options = [])
 	{
 		$this->_pepper = $pepper;
+		
+		$this->_options = $options;
 	}
 	
 	/**
@@ -42,7 +51,7 @@ final class PepperedPasswords
 	 */
 	public function hash($password)
 	{
-		return password_hash($this->_hmac($password), PASSWORD_DEFAULT);
+		return password_hash($this->_hmac($password), PASSWORD_DEFAULT, $this->_options);
 	}
 	
 	/**
