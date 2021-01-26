@@ -2,9 +2,9 @@
 namespace Netsilik\Lib;
 
 /**
- * @package Scepino\Lib
- * @copyright (c) 2010-2016 Scepino (http://scepino.com)
- * @license EUPL-1.1 (European Union Public Licence, v1.1)
+ * @package       Scepino\Lib
+ * @copyright (c) 2010-2021 Netsilik (http://netsilik.nl)
+ * @license       MIT
  */
 
 /**
